@@ -18,12 +18,3 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-
-
-<div class="contenedor">
- <img src="img/Modulo5.png">
-  <div class="texto-encima">Texto</div>
-  <div class="centrado">Centrado</div>
-</div>
-
-
