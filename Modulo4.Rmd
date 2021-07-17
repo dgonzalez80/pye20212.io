@@ -1,0 +1,17 @@
+---
+title: " "
+author: " "
+date: " "
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](img/Modulo4.png)
+
+
+## En construcción
+
+![](img/enconstruccion.gif)
