@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br/><br/><br/>
 
-### **Introducción**
+### <span style="color:#0DA5A6">**Introducción**</span>
 
 Este módulo contiene aquellos conceptos que se consideran necesarios para abordar los temas propuestos en  el curso. En caso de no recordarlos o de no  haberlos trabajado  previamente, te  recomiendo revisar el  contenido de esta modulo.
 
@@ -36,5 +36,6 @@ Son ellos:
 
 <br/><br/><br/>
 
-### **Objetivo**
+### <span style="color:#0DA5A6">**Objetivo**</span>
+
 Al finalizar este modulo los estudiantes RECORDARAN los conceptos de SUMATORIA, PRODUCTORIA, TEORIA DE CONJUNTOS, TECNCAS DE CONTEO, FUNCION EXOPNENCIAL y LOGARÍTMICA, DERIVACIÓN e INTEGRACIÓN, conceptos que serán requeridos para la mejor comprensión de los conceptos planteados en el curso.
