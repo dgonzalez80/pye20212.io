@@ -9,6 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+![](img/Modulo2.png)
+
 ## En construcción
 
 ![](img/enconstruccion.gif)

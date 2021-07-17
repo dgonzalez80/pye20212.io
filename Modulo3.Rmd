@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-![](img/Modulo3Z.png)
+![](img/Modulo3.png)
 
 ## En construcción
 
