@@ -5,6 +5,7 @@
 data/
 img/
 pdf/
+tex/
 .aux
 .log
 .out
