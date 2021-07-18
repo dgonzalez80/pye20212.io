@@ -1,0 +1,193 @@
+\documentclass[base=hide,11pt]{elegantbook}
+
+% Para Linux
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+\title{Guía de  aprendizaje \\
+	Unidad  5.1 Regresión Lineal}
+\subtitle{Probabilidad y Estadística}
+
+\author{Daniel Enrique González Gómez}
+\institute{Pontificia Universidad Javeriana Cali}
+\date{Mayo, 2021}
+\version{1.00}
+\bioinfo{Area}{Estadística}
+
+% Frase....
+% \extrainfo{}
+
+%\logo{logo-blue.png}
+\cover{regresion.png}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{color}
+\usepackage{tcolorbox}
+%%\usepackage[margin=0.5in]{geometry}
+%\usepackage{amsthm,amssymb,amsfonts}
+%%\usepackage{tikz,lipsum,lmodern}
+%\usepackage[most]{tcolorbox}
+%\usepackage{xcolor}
+
+\definecolor{col1}{rgb}{0.42,0.35,0.80}% magenta 
+\definecolor{col2}{rgb}{0.0,0.65,0.31}%   verde
+\definecolor{col3}{rgb}{1.0,0.49,0.09}%   naranja
+\definecolor{col4}{rgb}{0.0,0.2,0.6}%  azul oscuro 
+\definecolor{col5}{rgb}{0.99,0.05,0.21}%  rojo
+
+%---------------------------------------------------------------------------------------------
+\newtcolorbox{Box1}[2][]{	   % caja  azul
+  	colback=white!95!col1,
+	colframe=white!20!col1,	fonttitle=\bfseries,
+	colbacktitle=white!10!col1,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%------------------------------------------------------ --------------------------------------
+\newtcolorbox{Box2}[2][]{  % caja verde  ok
+  	colback=white!95!col2,
+colframe=white!20!col2,	fonttitle=\bfseries,
+colbacktitle=white!10!col2,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+%-------------------------------------------------------------------------------------------
+
+\newtcolorbox{Box3}[2][]{ % caja naranja
+  	colback=white!95!col3,
+colframe=white!20!col3,	fonttitle=\bfseries,
+colbacktitle=white!10!col3,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+
+\newtcolorbox{Box4}[2][]{  % caja purpura  ok
+  	colback=white!95!col4,
+colframe=white!20!col4,	fonttitle=\bfseries,
+colbacktitle=white!10!col4,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+\newtcolorbox{Box5}[2][]{    %
+  	colback=white!95!col5,
+colframe=white!20!col5,	fonttitle=\bfseries,
+colbacktitle=white!10!col5,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{mybox}[2][]{boxsep=1em,left=-0em,
+	
+	colback=blue!5!white, 
+	colframe=blue!75!black, 
+	fonttitle=\bfseries\sffamily,
+	colbacktitle=blue!85!red!60,enhanced,
+	
+	attach boxed title to top left={yshift=-3mm,xshift=3mm},
+	title=#2,#1}
+
+
+\newtcolorbox{mybox2}[2][]{%
+	colback=bg,
+	colframe=blue!75!black,	fonttitle=\bfseries,
+	coltitle=blue!75!black,
+	colbacktitle=white!5!col5,enhanced,
+	attach boxed title to top left={yshift=-1.2mm, xshift=2mm},
+	title=#2,#1}
+%-----------------------------------------------------------------------------------------
+\font\domino=domino
+\def\die#1{{\domino#1}}
+
+
+\setlength{\parindent}{0cm} % no sangrado en los parrafos
+\usepackage{hyperref} % insertar links
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+\maketitle
+
+\frontmatter
+%\tableofcontents
+%
+\mainmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. Introducción}
+Una de las aplicaciones mas importantes de la estadística corresponde a al modelo de regresión lineal. Esta técnica permite medir la relación que pueda existir entre una variable llamada variable respuesta  y un conjunto de variables independientes. Casos como la estimación de las ventas a partir de los gastos en publicidad, el consumo de un producto a partir de su precio, el precio de una casa a partir de sus características, la relación entre la resistencia a la compresión de un determinado concreto y la cantidad de uno de sus componentes,  entre otros
+
+El siguiente documento contiene los pasos que deberá realizar para  alcanzar el objetivo planteado
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Objetivos de la unidad}
+
+Al finalizar la unidad el estudiante estará en capacidad de PROPONER soluciones mediante la CONSTRUCCIÓN, VALIDACIÓN DE SUPUESTOS e INTERPRETACIÓN de resultados obtenidos de modelos de regresión en situaciones reales que permitan la toma de decisiones informadas y la generación de políticas o conclusiones.
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section*{3. Duración}
+
+La presente  unidad será desarrollada durante la comprendida entre 24 de mayo y el 4 de junio de 2021 .    
+Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Blackboard hasta el  7 de junio.
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Cronograma de trabajo}
+
+\begin{tabular}{p{4cm}p{10cm}}
+\hline	
+Fecha                   & Actividad	\\
+\hline 	
+{\bf Actividad 1}            & Resuelva los problemas presentados en el siguiente taller . La solución deberá ser entregada mediante formato pdf en link abierto para tal fin en Blackboard \\
+Trabajo individual     & {\bf Taller 501} \\
+Recurso & \\
+%
+%
+Video:& \href{https://youtu.be/l2vx7ZPiaFI}{Video Regresión Lineal}\\
+Guía :& \href{https://drive.google.com/file/d/1JH-plEtDZ4zT5fQVuG4lAo0a2FculN4i/view?usp=sharing}{ Guía 501}\\
+&\\
+Documento &\\
+&\href{https://javerianacaliedu-my.sharepoint.com/:b:/g/personal/dgonzalez_javerianacali_edu_co/EVp0k50H9ZRIta2Bt_Lrfy4BnBrQCDVU9WtWtQDVVROpKQ?e=YVO9hQ}{Capitulo 7-Navidi}\\
+& \href{https://javerianacaliedu-my.sharepoint.com/:b:/g/personal/dgonzalez_javerianacali_edu_co/EYoQNusqSudPokdd4rGBLNMBe7bYrnlmyme5XpNynO338A?e=G2K4Nn}{Capitulo 8-Navidi}\\
+         
+&\\
+Fecha  : & 7 de junio de 2021\\
+Hora   : & 11:59 hora local \\
+\hline 
+%\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{tabular}{p{4cm}p{10cm}}
+%	\hline	
+%	Fecha                   & Actividad	\\
+%	\hline
+
+\end{tabular}
+\vspace{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Criterios de evaluación}
+
+\begin{itemize}
+	\item Plantea el modelo correcto para dar solución a la situación planteada	
+	\item Realiza los procesos de estimación y validación de los supuestos correspondiente al modelo de regresión 
+	\item Realiza de manera correcta la interpretación de los resultados obtenidos y plantea recomendaciones 
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Entregables}
+
+\begin{itemize}
+\item \textcolor{col3}{\bf Actividad1.pdf :} Solución problemas planteados en el taller 501 en formato pdf 
+\end{itemize}
+\vspace{1cm}
+
+Lunes 7 de junio de 2021\\
+Hora límite : 23:59  hora  local
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
+  

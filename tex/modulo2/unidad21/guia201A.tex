@@ -1,0 +1,330 @@
+\documentclass[base=hide,12pt]{elegantbook}
+
+\title{Unidad : Variable aleatoria conjuntas}
+\subtitle{Probabilidad y Estadística}
+
+\author{Daniel Enrique González Gómez}
+\institute{Pontificia Universidad Javeriana Cali}
+\date{Marzo, 2020}
+\version{1.00}
+\bioinfo{Area}{Estadística}
+
+% Frase....
+% \extrainfo{}
+
+%\logo{logo-blue.png}
+\cover{banner_o3.png}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{color}
+\usepackage{tcolorbox}
+%%\usepackage[margin=0.5in]{geometry}
+%\usepackage{amsthm,amssymb,amsfonts}
+%%\usepackage{tikz,lipsum,lmodern}
+%\usepackage[most]{tcolorbox}
+%\usepackage{xcolor}
+
+\definecolor{col1}{rgb}{0.42,0.35,0.80}% magenta 
+\definecolor{col2}{rgb}{0.0,0.65,0.31}%   verde
+\definecolor{col3}{rgb}{1.0,0.49,0.09}%   naranja
+\definecolor{col4}{rgb}{0.0,0.2,0.6}%  azul oscuro 
+\definecolor{col5}{rgb}{0.99,0.05,0.21}%  rojo
+
+%---------------------------------------------------------------------------------------------
+\newtcolorbox{Box1}[2][]{	   % caja  azul
+	colback=white!95!col1,
+	colframe=white!20!col1,	fonttitle=\bfseries,
+	colbacktitle=white!10!col1,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%------------------------------------------------------ --------------------------------------
+\newtcolorbox{Box2}[2][]{  % caja verde  ok
+	colback=white!95!col2,
+	colframe=white!20!col2,	fonttitle=\bfseries,
+	colbacktitle=white!10!col2,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%-------------------------------------------------------------------------------------------
+
+\newtcolorbox{Box3}[2][]{ % caja naranja
+	colback=white!95!col3,
+	colframe=white!20!col3,	fonttitle=\bfseries,
+	colbacktitle=white!10!col3,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+
+\newtcolorbox{Box4}[2][]{  % caja purpura  ok
+	colback=white!95!col4,
+	colframe=white!20!col4,	fonttitle=\bfseries,
+	colbacktitle=white!10!col4,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+\newtcolorbox{Box5}[2][]{    %
+	colback=white!95!col5,
+	colframe=white!20!col5,	fonttitle=\bfseries,
+	colbacktitle=white!10!col5,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{mybox}[2][]{boxsep=1em,left=-0em,
+	
+	colback=blue!5!white, 
+	colframe=blue!75!black, 
+	fonttitle=\bfseries\sffamily,
+	colbacktitle=blue!85!red!60,enhanced,
+	
+	attach boxed title to top left={yshift=-3mm,xshift=3mm},
+	title=#2,#1}
+
+
+\newtcolorbox{mybox2}[2][]{%
+	colback=bg,
+	colframe=blue!75!black,	fonttitle=\bfseries,
+	coltitle=blue!75!black,
+	colbacktitle=white!5!col5,enhanced,
+	attach boxed title to top left={yshift=-1.2mm, xshift=2mm},
+	title=#2,#1}
+%-----------------------------------------------------------------------------------------
+\font\domino=domino
+\def\die#1{{\domino#1}}
+
+
+\usepackage{tikz}
+\setlength{\parindent}{0cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\LARGE \bf Introducción a la Probabilidad}    \\
+
+Los métodos estadísticos surgieron a partir de la teoría de la probabilidad, cuyos padres son Blaise Pascal (1623-1662) y Pierre de Fermat (1601-1665). Estos dos matemáticos franceses intercambiaron correspondencia durante julio y octubre de 1654 sobre varios problemas que un escritor de su país, aficionado a los juegos de dados, planteó a Pascal. Este noble era Antoine Gombaud, Caballero de Méré (1607-1684).\\
+\begin{center}
+	\includegraphics[scale=.2]{pascal.jpg} 
+	\includegraphics[scale=.325]{fermat.jpeg} 
+	\includegraphics[scale=.52]{mere.jpg}\\
+	Blaise Pascal \hspace{1.8cm}
+	Pierre de Fermat\hspace{1cm} 
+	Antoine Gombaud\\
+\end{center}
+
+Después del trabajo presentado por Pascal y Fermat, es importante destacar  el trabajo de Jakob Bernoulli.\\
+
+Con la  revolución industrial los conceptos estructurados por Pascal, Fermat, Bernoullo entre otros fueron incorporados a los procesos industriales. En 1930 del matemático ruso Andréi Kolmogórov, desarrolla la  base axiomática de la probabilidad que le da base a los conceptos actuales.\\
+
+Al iniciar este tema nos podemos hacemos muchos interrogantes relacionados con esta área de la estadística como.
+\begin{itemize}
+  \item Que es la probabilidad?
+  \item Cuál es el uso de la probabilidad?
+  \item Como se mide como se mide la probabilidad?
+  \item Que tipos de  probabilidad existen?
+  \item Que propiedades  posee la probabilidad?
+\end{itemize}
+
+Estas preguntas las iremos despenando durante el desarrollo de este modulo\\
+
+Para ello se conjugan palabras como las que se muestran en la siguiente nube:
+\begin{center}
+	\includegraphics[scale=.8]{figure/nube1}
+\end{center}
+
+\textcolor{col4}{\large  \bf Conceptos básicos de probabilidad}
+Inicialmente empezaremos presentando tres conceptos básicos sobre los cuales se fundamentan los axiomas de probabilidad que se enunciaran a continuación de los conceptos.\\
+\vspace{.5cm}
+\begin{Box4}{\bf Experimento aleatorio} 
+	
+Es una acción que se puede repetir en iguales condiciones  y aunque se conozcan sus posibles resultados no conocemos su resultado final.\\
+\end{Box4}
+\textcolor{col3}{\bf Ejemplos: }
+\begin{itemize}
+ \item [$E_{1}$]: Lanzar una moneda dos veces y observar los resultados obtenidos en sus caras superiores
+ \item[$E_{2}$]: Lanzar dos dados y observar la suma de los resultados superiores
+ \item[$E_{3}$]: Realizar un examen de estadística y observar el resultado obtenido
+ \item[$E_{4}$]: Se fabrican artículos en linea y se contabilizan el numero de articulos defectuosos en un dia
+ \item[$E_{5}$]: Se fabrican articulos hasta obtener 10 no defectuosos
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{.5cm}
+\begin{Box4}{\bf Espacio muestral}
+ESta determinado por el conjunto de  todos los posibles valores que pueda tomar el experimento aleatorio	
+\end{Box4}	
+\textcolor{col3}{\bf Ejemplos: }
+  \begin{itemize}
+    \item[$S_{1}$]= $\{ (cc), (cs), (sc), (ss) \}$
+    \item[$S_{2}$]= $\{ 1,2,3,4,5,6,7,8,9,10,11,12 \}$
+    \item[$S_{3}$]= $\{ x \in N  0.0 \leq x \leq 5.0 \}$
+    \item[$S_{4}$]= $\{0,1,2,3,4,5,6,....\}$
+    \item[$S_{5}$]= $\{10,11,12,13,14,15,16,......\}$
+  \end{itemize}
+\vspace{.5cm}
+\begin{Box4}{\bf Evento aleatorio}
+Es un subconjunto de los elementos del espacio muestral que es de nuestro interés	
+\end{Box4}	
+\textcolor{col3}{\bf Ejemplos: }
+  \begin{itemize}
+    \item[$A_{1}$]:  Sacar caras
+    \item[$A_{2}$]: $\{2\}$
+    \item[$A_{3}$]: Ganar el examen
+    \item[$A_{4}$]: $\{0\}$
+    \item[$A_{5}$]: $\{10\}$
+  \end{itemize}
+\vspace{.5cm}
+\textcolor{col5}{Nota:} En los ejemplos anteriores $E_1$,$S_1$ y $A_1$, conforman un ejemplo de Experimento aleatorio, Espacio muestral asociado y la descripción de un Evento aleatorio relacionado con los dos anteriores.
+
+Con estos conceptos vamos a plantear los diferentes enfoque se que se dan en probabilidad:
+\vspace{.5cm}
+\begin{Box4}{\large \bf Enfoque clásico}
+En este enfoque se define la probabilidad como.
+
+$$P(A)= \dfrac{n(A)}{n(S)} $$	
+Donde:\\
+$n(A)$: numero de  elementos del evento aleatorio $A$\\
+$n(S)$: numero de elementos del espacio muestral $S$
+\end{Box4}	
+
+En este caso es necesario calcular el numero de elementos tanto del espacio nuestral como del evento aleatorio. Entonces debemos conocer las técnicas  de conteo expuestas en la guia de la unidad 0.2.\\
+
+\textcolor{col3}{\bf Ejemplo: }\\
+Para calcular la probabilidad de obtener $2$ al lanzar dos dados debemos de contar el numero de posibles resultados y de ellos en cuantos ocurre el evento de interés. En este caso sera:
+
+$n(A)=1$ , pues existe un solo evento que es obtener en ambos dados un uno : \( \includegraphics[scale=.04]{figure/d1a} , \includegraphics[scale=.04]{figure/d1a}\) y $n(S)=36$ , debido a que existen  6 formas diferentes en el dado1 y 6 formas diferentes  en el dados2. Este caso corresponde al indicado en la Guía 0.2 Caso A1 de las técnicas de  conteo. Importa el orden con  repetucion. $6 \times 6 =36$
+
+$$P(A) = \dfrac{n(A)}{n(S)} = \dfrac{1}{36} $$
+
+No todas las probabilidades se pueden calcular con este enfoque, pues exige en primer lugar conocer las probabilidades de cada uno de los eventos simples y por otro lado supone que cada uno de ellos tiene  igual probabilidad. Para resolver este problema se plante el siguiente enfoque.
+
+\vspace{.5cm}
+\begin{Box4}{\large \bf Enfoque frecuentista}
+	En este enfoque se define la probabilidad como:
+	$$P(A)=\displaystyle\lim_{n \to{+}\infty} \dfrac{\text{numero de veces que ocurre A}}{n} $$
+	
+	También conocida como  la regla de  Laplace	
+\end{Box4}
+
+Este enfoque se basa en la relación que existe en la ocurrencia de un evento aleatorio con el tamaño de la muestra. Pero ademas se puede verificar que cuando mayor sea el tamaño de la muestra esta relación se va estabilizando hasta llegar una valor constante que corresponde al valor de la probabilidad.
+
+Con  el siguiente código en  R podemos verificar lo descrito anteriormente.
+
+\begin{Box3}{Código R}
+\begin{verbatim}
+n=10
+d1=sample(1:6,n,replace = TRUE )
+d2=sample(1:6,n,replace = TRUE )
+dados=data.frame(d1,d2)
+suma=apply(dados,1,sum)
+probabilidad=sum(as.numeric(suma==2))/n
+probabilidad
+\end{verbatim}
+\end{Box3}
+
+La siguiente tabla resumen los resultados para diferentes valore de $n$
+
+\begin{verbatim}
+n            P(A)
+10           0.2
+100          0.1
+1000         0.028
+10000        0.0297
+100000       0.02847
+1000000      0.02801
+10000000     0.027805
+\end{verbatim}
+
+El valor teórico de  $P(A)= 1/36 = 0.02777777777...$\\
+
+En el caso del ejemplo correspondiente al $E_3$:  Realizar un examen de estadística y observar el resultado obtenido, donde el espacio muestral esta conformado por el rango de  los reales entre cero y cinco, queremos calcular la probabilidad asociado con el evento $A_3$:  ganar el  examen. \\
+En este caso debemos utilizar el enfoque frecuentista para tener una estimación del valor de la probabilidad de $A$.\\
+
+\textcolor{col3}{\bf Ejemplo: }\\
+Para realizar esta estimación podemos tomar una muestra de estudiantes que ya han presentado el examen y establecer de  ellos cuantos ha ganado el examen. De esta forma podemos tener una valoración de que tan difícil es ganar el examen.\\
+
+Cunado no podemos estimar  una  probabilidad mediante el  enfoque clásico o por el  enfoque frecuenrtista tenemos la posibilidad de consultar un experto en  el tema que nos permita valorarla.
+
+\vspace{.5cm}
+\begin{Box4}{\large \bf Enfoque subjetivo}
+	En este enfoque se define la probabilidad como:
+	$$P(A)= \text{valor asignado  por un experto}$$	
+\end{Box4}
+
+\textcolor{col3}{\bf Ejemplo: }\\
+Para valorar el riesgo que se corre al realizarse una operación quirúrgica, un paciente puede preguntar al medico, que tan riesgosa es la operación. El seguramente tendrá una valoración para su caso dependiendo sus preexistencias.
+
+\textcolor{col4}{\large  \bf Axiomas de probabilidad}\\
+
+Los axiomas corresponden a afirmaciones que se consideran verdaderas y  que soportan las teorias de una  ciencia. En el  caso de  la probabilidad fueron propuestas por Andréi Kolmogórov
+
+\begin{Box4}{Axiomas de probabilidad}
+\begin{itemize}
+		\vspace{.4cm}
+	\item[$A_1$:] Sea $S$ un espacio muestral asociado a  un experimento, entoces: $$P(S)=1$$
+	\vspace{.2cm}
+	\item[$A_2$:] Para cualquier evento $A$, se cumple que: 
+	$$0 \leq P(A) \leq 1$$ 
+		\vspace{.2cm}
+	\item[$A_3$:] Si $A$ y $B$ son dos eventos mutuamente excluyentes, entonces:
+	$$P(A \cup B) = P(A) + P(B) $$
+	En general para dos eventos $A$ y $B$, 
+	$$P(A \cup B) = P(A) + P(B) -P(A\cap B)$$
+		\vspace{.2cm}
+	\item[$A_4$:] Para cualquier evento $A$, 
+	$$P(\overline{A}) = 1 - P(A) $$
+		\vspace{.2cm}
+	\item[$A_5$:] La probabilidad de $P(\phi) = 0$   
+\end{itemize}	
+\end{Box4}	
+
+Los anteriores axiomas rigen todas las operaciones que realicemos en  el desarrollo de los cálculos de probabilidades.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage 
+\textcolor{col4}{\large  \bf Tipos de probabilidad}\\
+
+Inicialmente nos enfocaremos en  dos tipos de probabilidad que presentamos a continuaciòn, utilizando para ello una tabla cruzada o de doble entrada, tambien llamada tabla de contingencia. 
+\begin{center}
+		\rule{9cm}{.1cm}\\
+{\small 
+	\begin{tabular}{p{1.5cm}|p{2cm}|p{2cm}|p{1.5cm}}
+		&&\\
+		&  $A$  & $\overline{A}$ & \\
+		%	&&\\	
+		\hline
+		&&\\
+		$B$   &$P(A \cap B)$ &  $P(\overline{A} \cap B)$&$P(B)$\\
+		%	&&\\
+		\hline
+		&&\\
+		$\overline{B}$   &$P(A \cap \overline{B})$ &  $P(\overline{A} \cap\overline{B})$&$P(\overline{B})$\\
+		%	&&\\
+		\hline
+		&&\\ 
+		& $P(A)$ & $P(\overline{A})$ & 1.00 \\
+		%	&&\\    	
+	\end{tabular}
+	\\
+}
+\rule{9cm}{.1cm}\\
+\end{center}
+
+\textcolor{col4}{\bf Probabilidad simple o marginal}: corresponde a la probabilidad de un  evento simple \\
+$P(A)$ : probabilidad de que ocurra A \\
+$P(\overline{A})$ : probabilidad de que NO ocurra A \\
+$P(B)$ : probabilidad de que ocurra B \\
+$P(\overline{B})$ : probabilidad de que NO ocurra B \\
+
+\textcolor{col4}{\bf Probabilidad conjunta}: en esta probabilidad ocurren por lo menos dos eventos y ellos  ocurren a la  vez \\ 
+$P(A \cap B)$ : probabilidad de que ocurra A y B \\
+$P(\overline{A} \cap B)$ : probabilidad de que NO ocurra A y ocurra B \\
+$P(A \cap \overline{B})$ : probabilidad de que ocurra A y NO ocurra B \\
+$P(\overline{A} \cap \overline{B})$ : probabilidad de que NO ocurra A ni B \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

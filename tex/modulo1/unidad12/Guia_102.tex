@@ -1,0 +1,159 @@
+\documentclass[base=hide,12pt]{elegantbook}
+
+\title{Unidad : Variable aleatoria conjuntas}
+\subtitle{Probabilidad y Estadística}
+
+\author{Daniel Enrique González Gómez}
+\institute{Pontificia Universidad Javeriana Cali}
+\date{Marzo, 2020}
+\version{1.00}
+\bioinfo{Area}{Estadística}
+
+% Frase....
+% \extrainfo{}
+
+%\logo{logo-blue.png}
+\cover{banner_o3.png}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{color}
+\usepackage{tcolorbox}
+%%\usepackage[margin=0.5in]{geometry}
+%\usepackage{amsthm,amssymb,amsfonts}
+%%\usepackage{tikz,lipsum,lmodern}
+%\usepackage[most]{tcolorbox}
+%\usepackage{xcolor}
+
+\definecolor{col1}{rgb}{0.42,0.35,0.80}% magenta 
+\definecolor{col2}{rgb}{0.0,0.65,0.31}%   verde
+\definecolor{col3}{rgb}{1.0,0.49,0.09}%   naranja
+\definecolor{col4}{rgb}{0.0,0.2,0.6}%  azul oscuro 
+\definecolor{col5}{rgb}{0.99,0.05,0.21}%  rojo
+
+%---------------------------------------------------------------------------------------------
+\newtcolorbox{Box1}[2][]{	   % caja  azul
+	colback=white!95!col1,
+	colframe=white!20!col1,	fonttitle=\bfseries,
+	colbacktitle=white!10!col1,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%------------------------------------------------------ --------------------------------------
+\newtcolorbox{Box2}[2][]{  % caja verde  ok
+	colback=white!95!col2,
+	colframe=white!20!col2,	fonttitle=\bfseries,
+	colbacktitle=white!10!col2,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%-------------------------------------------------------------------------------------------
+
+\newtcolorbox{Box3}[2][]{ % caja naranja
+	colback=white!95!col3,
+	colframe=white!20!col3,	fonttitle=\bfseries,
+	colbacktitle=white!10!col3,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+
+\newtcolorbox{Box4}[2][]{  % caja purpura  ok
+	colback=white!95!col4,
+	colframe=white!20!col4,	fonttitle=\bfseries,
+	colbacktitle=white!10!col4,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+\newtcolorbox{Box5}[2][]{    %
+	colback=white!95!col5,
+	colframe=white!20!col5,	fonttitle=\bfseries,
+	colbacktitle=white!10!col5,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{mybox}[2][]{boxsep=1em,left=-0em,
+	
+	colback=blue!5!white, 
+	colframe=blue!75!black, 
+	fonttitle=\bfseries\sffamily,
+	colbacktitle=blue!85!red!60,enhanced,
+	
+	attach boxed title to top left={yshift=-3mm,xshift=3mm},
+	title=#2,#1}
+
+
+\newtcolorbox{mybox2}[2][]{%
+	colback=bg,
+	colframe=blue!75!black,	fonttitle=\bfseries,
+	coltitle=blue!75!black,
+	colbacktitle=white!5!col5,enhanced,
+	attach boxed title to top left={yshift=-1.2mm, xshift=2mm},
+	title=#2,#1}
+%-----------------------------------------------------------------------------------------
+\font\domino=domino
+\def\die#1{{\domino#1}}
+
+
+
+\setlength{\parindent}{0cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textcolor{col4}{\LARGE \bf Modelos especiales de probabilidad}    \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textcolor{col4}{\LARGE  \bf Distribución Bernoulli}\\
+%\begin{Box2}{Propiedades}
+%Propiedades
+%\end{Box2}
+%\begin{Box4}{Titulo}
+%	Definiciones
+%\end{Box4}
+%%ejemplo 1 ================================================================================
+%\textcolor{col3}{\bf Ejemplo 1.}  \\
+%%====================================================================================
+%\textcolor{col4}{\bf Solución: }\\
+%\textcolor{col1}{\bf Ejemplo 9:}\\
+%\textcolor{col5}{\bf Nota:}\\
+%\begin{lstlisting}
+%codigo R
+%\end{lstlisting}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textcolor{col4}{\LARGE \bf Introducción a la Probabilidad}    \\
+
+Santiago de Cali 7 de julio de 2021\\
+\begin{center}
+	
+\textcolor{col4}{\large \bf La Asociación Colombiana de Micro, Pequeñas y \\
+	Medianas Empresas ACOPI \\
+	Seccional Atlántico } \\
+
+NIT. 890.101.834-9
+\end{center}
+
+
+DEBE A:  \\
+{\bf Daniel Enrique González Gómez}, identificado con cedula de ciudadanía : 16.669372 
+\\
+%\vspace{.2cm}
+
+Declaro voluntariamente y bajo gravedad de juramento no ser responsable al régimen de
+IVA.\\
+\vspace{.5cm}
+
+POR CONCEPTO DE : Procesamiento de información relacionadas con la Encuesta de Desempeño Empresarial como apoyo al Observatorio de la MiPyme \\
+ 
+LA SUMA DE: 1’000.000 (Un millón mil de pesos)\\
+\vspace{3cm}
+
+
+{\bf Daniel Enrique González Gómez} \\
+cc. 16669372 \\
+Carrera 85A # 33-32 Santiago de Cali - Valle del Cauca \\
+celular : 316 391 37 02 \\
+cuenta de ahorros Banco Davivienda : 017570035174 \\
+                                     
+
+
+
+\end{document}

@@ -1,0 +1,190 @@
+\documentclass[base=hide,12pt]{elegantbook}
+
+\title{Unidad : Variable aleatoria conjuntas}
+\subtitle{Probabilidad y Estadística}
+
+\author{Daniel Enrique González Gómez}
+\institute{Pontificia Universidad Javeriana Cali}
+\date{Marzo, 2020}
+\version{1.00}
+\bioinfo{Area}{Estadística}
+
+% Frase....
+% \extrainfo{}
+
+%\logo{logo-blue.png}
+\cover{banner_o3.png}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{color}
+\usepackage{tcolorbox}
+%%\usepackage[margin=0.5in]{geometry}
+%\usepackage{amsthm,amssymb,amsfonts}
+%%\usepackage{tikz,lipsum,lmodern}
+%\usepackage[most]{tcolorbox}
+%\usepackage{xcolor}
+
+\definecolor{col1}{rgb}{0.42,0.35,0.80}% magenta 
+\definecolor{col2}{rgb}{0.0,0.65,0.31}%   verde
+\definecolor{col3}{rgb}{1.0,0.49,0.09}%   naranja
+\definecolor{col4}{rgb}{0.0,0.2,0.6}%  azul oscuro 
+\definecolor{col5}{rgb}{0.99,0.05,0.21}%  rojo
+
+%---------------------------------------------------------------------------------------------
+\newtcolorbox{Box1}[2][]{	   % caja  azul
+	colback=white!95!col1,
+	colframe=white!20!col1,	fonttitle=\bfseries,
+	colbacktitle=white!10!col1,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%------------------------------------------------------ --------------------------------------
+\newtcolorbox{Box2}[2][]{  % caja verde  ok
+	colback=white!95!col2,
+	colframe=white!20!col2,	fonttitle=\bfseries,
+	colbacktitle=white!10!col2,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%-------------------------------------------------------------------------------------------
+
+\newtcolorbox{Box3}[2][]{ % caja naranja
+	colback=white!95!col3,
+	colframe=white!20!col3,	fonttitle=\bfseries,
+	colbacktitle=white!10!col3,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+
+\newtcolorbox{Box4}[2][]{  % caja purpura  ok
+	colback=white!95!col4,
+	colframe=white!20!col4,	fonttitle=\bfseries,
+	colbacktitle=white!10!col4,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+\newtcolorbox{Box5}[2][]{    %
+	colback=white!95!col5,
+	colframe=white!20!col5,	fonttitle=\bfseries,
+	colbacktitle=white!10!col5,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{mybox}[2][]{boxsep=1em,left=-0em,
+	
+	colback=blue!5!white, 
+	colframe=blue!75!black, 
+	fonttitle=\bfseries\sffamily,
+	colbacktitle=blue!85!red!60,enhanced,
+	
+	attach boxed title to top left={yshift=-3mm,xshift=3mm},
+	title=#2,#1}
+
+
+\newtcolorbox{mybox2}[2][]{%
+	colback=bg,
+	colframe=blue!75!black,	fonttitle=\bfseries,
+	coltitle=blue!75!black,
+	colbacktitle=white!5!col5,enhanced,
+	attach boxed title to top left={yshift=-1.2mm, xshift=2mm},
+	title=#2,#1}
+%-----------------------------------------------------------------------------------------
+\font\domino=domino
+\def\die#1{{\domino#1}}
+
+
+\usepackage{tikz}
+\setlength{\parindent}{0cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\LARGE \bf Taller 2.2}   \\
+
+
+\textcolor{col4}{\Large \bf Resumen de conceptos}   \\
+
+En esta unidad nos enfrentamos a una  situación  diferente tratada en  la unidad 2.1. Bajo los axiomas que rigen la  probabilidad en esta unidad trataremos  los temas  independencia de eventos, probabilidad condicional, la regla de la multiplicación,  la probabilidad total y el teorema de Bayes.\\
+
+\begin{Box2}{Definición: Probabilidad condicional}
+La probabilidad condicional de $B$, dado $A$, se denota  como  $P(B|A)$, se define como :
+
+$$P(B|A) = \dfrac{P(A \cap B)}{P(A)}$$
+Siempre que $P(A)> =0$	
+\end{Box2}
+
+
+\begin{Box2}{Regla de  la multiplicación  de eventos}
+La probabilidad de que ocurra $A$ y $B$  asociados a un experimento aleatorio es:
+
+$$P(A \cap B) = P(A) P(B | A) $$
+o
+$$P(A \cap B) = P(B) P(A | B) $$
+
+En el caso de que los eventos $A$  y $B$ sean independientes entonces:
+$$P(A \cap B) = P(A) P(B) $$	
+\end{Box2}
+
+
+\begin{Box2}{Definición: Independencia de eventos}
+	Dos eventos $A$ y $B$, son independientes si y  solo si la probabilidad del evento $B$ no es afectada por la ocurrencia del evento  $A$ o viceversa.	
+	$$P(A \cap B) = P(A) P(B) $$
+	o
+	$$P(B |A )  = P(B) $$
+	
+\end{Box2}
+
+\begin{Box2}{Regla de  la probabilidad total}
+Dado una serie de eventos que conforman una partición $E_1, E_2, E_3,...E_k$, que son mutuamente excluyentes y exhaustivos y un evento A, la probabilidad del evento A se expresa como:
+$$P(A) = P(E_1) P(A|E_1) + P(E_2) P(A|E_2) + P(E_3) P(A|E_3) + .... + P(E_k) P(A|E_k) $$
+\end{Box2}
+
+
+\begin{Box2}{Teorema de  Bayes}
+Dado una serie de eventos que conforman una partición $E_1, E_2, E_3,...E_k$, que son mutuamentes excluyentes y exhaustivos, con probabilidades a priori $P(E_1)$, $P(E_2)$, $P(E_3)$,...$P(E_k)$, 	 Si ocurre un evento $A$,  la probabilidad a posteriori de $E_i$ dado $A$, es la probabilidad condicional :
+$$P(E_i|A) =\dfrac{P(E_i \cap A)}{P(A)} = \dfrac{P(E_i) P(A|E_i)}{\displaystyle\sum_{j=1}^{k} P(E_j)P(A|E_j)}$$
+\end{Box2}
+
+\vspace{.5cm}
+\textcolor{col3}{\LARGE \bf Problemas propuestos: }\\
+
+\begin{enumerate} 
+\item Una nueva cafetería de  la universidad esta interesada en ofrecer ademas de menú saludable, un menú vegetariano para aquellas personas que potencialmente visitaran la cafetería. Con el fin de evaluar algunos riesgos en los costos por no consumo de alimentos decide consultar estadísticas que le han brindado otras cafeterías establecidas en universidades similares. \\
+
+En estos casos un 35\% de todos los clientes piden platos vegetarianos y un 55\% son estudiantes. También se conoció que de los que habitualmente piden platos vegetarianos, el 40\% son estudiantes.
+El administrador de la cafetería desea conocer un panorama amplio con el fin de poder brindar un mejor servicio.
+\\
+Él desea tener algunos platos preparados anticipadamente y por tanto desea establecer que tipo de plato  es más probable que pida una persona que no es un estudiante y así atender el pedido de manera más rápida.\\
+
+Usted conocedor de los elementos básicos de probabilidad desea ayudarlo para lo cual debe preparar un correo en respuesta a los requerimientos solicitados.
+%\newpage 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Un grupo de estudiantes se especializa en evaluar las perspectivas de los locales para abrir nuevas tiendas de ropa en centros comerciales. El grupo considera que las  perspectivas pueden ser buenas, razonables o malas. Se han revisado las  valoraciones realizadas por este grupo y se ha observado que en el caso de todas las tiendas que han tenido ventas anuales de más de 1000 millones, el grupo había dicho que las perspectivas eran buenas en un 70\%, razonables en el 20\% y malas en un 10\%. De todas las tiendas que fracasaron, había dicho que las perspectivas de estas tiendas eran buenas en el 20\%, razonables en el 30\% y malas en el 50\%. Por experiencia se sabe que el 60\% de este tipo de tiendas tiene éxito y el 40\% restante fracasa.
+
+Usted lidera un grupo de empresarios interesados en establecer una tienda de este tipo en la ciudad y dado que tiene conocimientos de probabilidad y lidera el grupo inversor, le han pedido que les informe sobre algunos interrogantes al  respecto:
+\begin{enumerate}
+	\item Valorar que perspectiva es más probable al establecer una tienda en un centro comercial, basados en el estudio realizado por el grupo de expertos.
+	\item También determinar la posibilidad de tener éxito en caso de que las perspectivas sean buenas
+	\item Por último ellos quieren verificar si las valoraciones como buenas realizadas por el grupo se pueden considerar como independientes con relación a resultados exitosos. 
+\end{enumerate}
+% Tomado y adactado de Newbold 2013
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Un grupo de ingenieros esta probando un nuevo método analítico para detectar contaminantes
+en el agua para consumo humano. Este nuevo método de análisis químico es importante porque, si se adopta, podrá ser utilizado para detectar al mismo tiempo tres diferentes contaminantes: orgánicos, disolventes volátiles, y compuestos clorados, en lugar de tener que utilizar pruebas únicas para cada contaminante. Los fabricantes de la prueba declaran que pueda detectar altos niveles de contaminantes orgánicos con 99,7\% de precisión, disolventes volátiles con 99,95\% de precisión, y clorados comlibras con 89,7\% de precisión. Si un contaminante no está presente, la prueba indica negativo. Para calibrar la prueba se prepararon un gran número de
+muestras, de las cuales un 60\% de ellas contienen contaminantes orgánicos, un 27\% , disolventes volátiles, y un 13\%, trazas de compuestos clorados. Si se selecciona una muestra de ensayo de manera aleatoriamente: 
+\begin{enumerate}
+\item  Cuál es la probabilidad de que la prueba de positiva? 
+\item Si la prueba da positiva, cuál es la probabilidad de que los compuestos clorados estén presentes?
+\item Realice un comentario sobre los resultados obtenidos
+\end{enumerate}
+
+
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

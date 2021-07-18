@@ -1,0 +1,189 @@
+\documentclass[base=hide,12pt]{elegantbook}
+
+\title{Unidad 2.1 \\
+Conceptos básicos y enfoques de probabilidad}
+\subtitle{Probabilidad y Estadística}
+
+\author{Daniel Enrique González Gómez}
+\institute{Pontificia Universidad Javeriana Cali}
+\date{Ferero 2021 }
+\version{1.00}
+\bioinfo{Área}{Estadística}
+
+% Frase....
+% \extrainfo{}
+
+%\logo{logo-blue.png}
+\cover{Modulo2.png}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{color}
+\usepackage{tcolorbox}
+%%\usepackage[margin=0.5in]{geometry}
+%\usepackage{amsthm,amssymb,amsfonts}
+%%\usepackage{tikz,lipsum,lmodern}
+%\usepackage[most]{tcolorbox}
+%\usepackage{xcolor}
+
+\definecolor{col1}{rgb}{0.42,0.35,0.80}% magenta 
+\definecolor{col2}{rgb}{0.0,0.65,0.31}%   verde
+\definecolor{col3}{rgb}{1.0,0.49,0.09}%   naranja
+\definecolor{col4}{rgb}{0.0,0.2,0.6}%  azul oscuro 
+\definecolor{col5}{rgb}{0.99,0.05,0.21}%  rojo
+
+%---------------------------------------------------------------------------------------------
+\newtcolorbox{Box1}[2][]{	   % caja  azul
+	colback=white!95!col1,
+	colframe=white!20!col1,	fonttitle=\bfseries,
+	colbacktitle=white!10!col1,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%------------------------------------------------------ --------------------------------------
+\newtcolorbox{Box2}[2][]{  % caja verde  ok
+	colback=white!95!col2,
+	colframe=white!20!col2,	fonttitle=\bfseries,
+	colbacktitle=white!10!col2,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%-------------------------------------------------------------------------------------------
+
+\newtcolorbox{Box3}[2][]{ % caja naranja
+	colback=white!95!col3,
+	colframe=white!20!col3,	fonttitle=\bfseries,
+	colbacktitle=white!10!col3,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+
+\newtcolorbox{Box4}[2][]{  % caja purpura  ok
+	colback=white!95!col4,
+	colframe=white!20!col4,	fonttitle=\bfseries,
+	colbacktitle=white!10!col4,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+\newtcolorbox{Box5}[2][]{    %
+	colback=white!95!col5,
+	colframe=white!20!col5,	fonttitle=\bfseries,
+	colbacktitle=white!10!col5,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{mybox}[2][]{boxsep=1em,left=-0em,
+	
+	colback=blue!5!white, 
+	colframe=blue!75!black, 
+	fonttitle=\bfseries\sffamily,
+	colbacktitle=blue!85!red!60,enhanced,
+	
+	attach boxed title to top left={yshift=-3mm,xshift=3mm},
+	title=#2,#1}
+
+
+\newtcolorbox{mybox2}[2][]{%
+	colback=bg,
+	colframe=blue!75!black,	fonttitle=\bfseries,
+	coltitle=blue!75!black,
+	colbacktitle=white!5!col5,enhanced,
+	attach boxed title to top left={yshift=-1.2mm, xshift=2mm},
+	title=#2,#1}
+%-----------------------------------------------------------------------------------------
+\font\domino=domino
+\def\die#1{{\domino#1}}
+
+
+
+\setlength{\parindent}{0cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textcolor{col4}{\LARGE \bf Modelos especiales de probabilidad}    \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textcolor{col4}{\LARGE  \bf Distribución Bernoulli}\\
+%\begin{Box2}{Propiedades}
+%Propiedades
+%\end{Box2}
+%\begin{Box4}{Titulo}
+%	Definiciones
+%\end{Box4}
+%%ejemplo 1 ================================================================================
+%\textcolor{col3}{\bf Ejemplo 1.}  \\
+%%====================================================================================
+%\textcolor{col4}{\bf Solución: }\\
+%\textcolor{col1}{\bf Ejemplo 9:}\\
+%\textcolor{col5}{\bf Nota:}\\
+%\begin{lstlisting}
+%codigo R
+%\end{lstlisting}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle
+
+\frontmatter
+%\tableofcontents
+%
+\mainmatter
+
+\section*{1. Introducción}
+
+El concepto de probabilidad constituye uno de los  pilares de la estadística que permiten la construcción de  conceptos posteriores como el de  {\bf Variable Aleatoria} e {\bf Inferencia Estadística}. Se parte de  los  conceptos básicos para lo cual se requiere revisar los temas de teoría de  conjuntos y técnicas de conteo del {\bf Módulo 0} ({\bf Unidad 0.2}). \\
+
+En esta unidad se consideran los conceptos básicos de probabilidad, los axiomas que la rigen y los diferentes enfoques para su calculo.
+
+\section*{2. Objetivos de la unidad}\\
+
+Al finalizar la  unidad el estudiante estará en capacidad de DESARROLLAR el pensamiento probabilístico mediante el calculo e interpretación de probabilidades mediante la  comprensión de los CONCEPTOS BÁSICOS, los diferentes ENFOQUES y TIPOS de probabilidad  que le ayuden a cuantificar el riesgo para la toma de decisiones.\\
+
+
+\section*{3. Duración}\\
+
+La presente  unidad será desarrollada durante la  cuarta semana del semestre (22 al 28 de febrero de 2021). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Blackboard hasta el  28 de febrero.\\
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+
+\section*{4. Cronograma de trabajo}
+
+
+\begin{tabular}{p{4cm}p{10cm}}
+	\hline	
+	Fecha                   & Actividad	\\
+	\hline 	
+	{\bf Actividad 1}       & \href{https://javerianacaliedu-my.sharepoint.com/:b:/g/personal/dgonzalez_javerianacali_edu_co/ETPgO49hSddLhEWo-xVAIwkBEoucX7_gRzQjVd-90E6iGw?e=v6gGJd}{Taller 2.1 Probabilidad}.  Resuelva las preguntas del siguiente  taller y entregue su solución  en formato pdf  en el enlace correspondiente de Blackboard.  \\
+	
+	Recurso                 & \href{https://javerianacaliedu-my.sharepoint.com/:b:/g/personal/dgonzalez_javerianacali_edu_co/EZW566KCy4JEteDOachNsZMBi_BRXzyHQzlis0ox3z5FIw?e=7CgZE7}{Guía 2.1}\\	
+	& \href{https://javerianacaliedu-my.sharepoint.com/:b:/g/personal/dgonzalez_javerianacali_edu_co/EWyklcI3XH9Dk8ECZo-V5JsBA4EkbDyLMtow3ZxFl_3LwA?e=9XhGWC}{Guía 0.2}
+	
+                        & \\
+Fecha  :                & 6 de septiembre de 2020\\
+Hora   :                & 23:59 hora local \\
+\hline 
+\end{tabular}	
+
+\section*{5. Criterios de evaluación}
+
+El taller de la unidad 2.1 recoge los elementos estudiados y por tanto  tiene objetivo la revisión de los principales conceptos tratados.
+
+\begin{itemize}
+	\item Reconocer los principales conceptos de  probabilidad y su efecto sobre la toma de decisiones informadas.
+	\item Reconocer e identificar los diferentes tipos de probabilidad  y sus respectivas interpretación.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Entregable}
+
+%\begin{itemize}
+\textcolor{col4}{\bf Actividad 1 - Unidad 2.1.pdf} 
+%\end{itemize}
+\vspace{.2cm}
+
+Domingo 28 de febrero de 2021 \\
+Hora límite : 23:59  hora  local
+%
+
+%%%%%%%%%%%%%%%	
+	
+\end{document}

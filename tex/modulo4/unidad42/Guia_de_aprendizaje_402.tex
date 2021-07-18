@@ -1,0 +1,202 @@
+\documentclass[base=hide,11pt]{elegantbook}
+
+% Para Linux
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+\title{Guía de  aprendizaje\\
+	Unidad  4.2 Intervalos de confianza}
+\subtitle{Probabilidad y Estadística}
+
+\author{Daniel Enrique González Gómez}
+\institute{Pontificia Universidad Javeriana Cali}
+\date{Octubre, 2020}
+\version{1.00}
+\bioinfo{Area}{Estadística}
+
+% Frase....
+% \extrainfo{}
+
+%\logo{logo-blue.png}
+\cover{Modulo4.png}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{color}
+\usepackage{tcolorbox}
+%%\usepackage[margin=0.5in]{geometry}
+%\usepackage{amsthm,amssymb,amsfonts}
+%%\usepackage{tikz,lipsum,lmodern}
+%\usepackage[most]{tcolorbox}
+%\usepackage{xcolor}
+
+\definecolor{col1}{rgb}{0.42,0.35,0.80}% magenta 
+\definecolor{col2}{rgb}{0.0,0.65,0.31}%   verde
+\definecolor{col3}{rgb}{1.0,0.49,0.09}%   naranja
+\definecolor{col4}{rgb}{0.0,0.2,0.6}%  azul oscuro 
+\definecolor{col5}{rgb}{0.99,0.05,0.21}%  rojo
+
+%---------------------------------------------------------------------------------------------
+\newtcolorbox{Box1}[2][]{	   % caja  azul
+  	colback=white!95!col1,
+	colframe=white!20!col1,	fonttitle=\bfseries,
+	colbacktitle=white!10!col1,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%------------------------------------------------------ --------------------------------------
+\newtcolorbox{Box2}[2][]{  % caja verde  ok
+  	colback=white!95!col2,
+colframe=white!20!col2,	fonttitle=\bfseries,
+colbacktitle=white!10!col2,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+%-------------------------------------------------------------------------------------------
+
+\newtcolorbox{Box3}[2][]{ % caja naranja
+  	colback=white!95!col3,
+colframe=white!20!col3,	fonttitle=\bfseries,
+colbacktitle=white!10!col3,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+
+\newtcolorbox{Box4}[2][]{  % caja purpura  ok
+  	colback=white!95!col4,
+colframe=white!20!col4,	fonttitle=\bfseries,
+colbacktitle=white!10!col4,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+\newtcolorbox{Box5}[2][]{    %
+  	colback=white!95!col5,
+colframe=white!20!col5,	fonttitle=\bfseries,
+colbacktitle=white!10!col5,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{mybox}[2][]{boxsep=1em,left=-0em,
+	
+	colback=blue!5!white, 
+	colframe=blue!75!black, 
+	fonttitle=\bfseries\sffamily,
+	colbacktitle=blue!85!red!60,enhanced,
+	
+	attach boxed title to top left={yshift=-3mm,xshift=3mm},
+	title=#2,#1}
+
+
+\newtcolorbox{mybox2}[2][]{%
+	colback=bg,
+	colframe=blue!75!black,	fonttitle=\bfseries,
+	coltitle=blue!75!black,
+	colbacktitle=white!5!col5,enhanced,
+	attach boxed title to top left={yshift=-1.2mm, xshift=2mm},
+	title=#2,#1}
+%-----------------------------------------------------------------------------------------
+\font\domino=domino
+\def\die#1{{\domino#1}}
+
+
+\setlength{\parindent}{0cm} % no sangrado en los parrafos
+\usepackage{hyperref} % insertar links
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+\maketitle
+
+\frontmatter
+%\tableofcontents
+%
+\mainmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{introduction}
+%	\item Introducción al tema 
+%	\item Objetivos de la unidad
+%	\item Fundamentos conceptuales
+%	\item Metodología
+%	\item Criterios de evaluación
+%	\item Fechas de entrega
+%\end{introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. Introducción}
+
+La inferencia estadística constituye una de las principales componentes de la metodologia estadistica, encaminados a generar procedimiento para el avance de la ciencia. Con ella se pueden generalizar los
+resultados obtenidos en una muestra a toda la población, previo cumplimiento de supuestos establecidos por la estadística (llamada paramétrica) .\\
+
+Antes de empezar es necesario entender los conceptos básicos como: población, censo, parámetro, muestra, muestreo, estimador, estimación, métodos de estimación, propiedades de los estimadores como la insesgadez, la eficiencia, la consistencia .Las distribuciones muestrales : normal, t-student, chi-cuadrado y f de Fisher. Todos trabajados y tratados en la unidad 4.1.\\
+
+El siguiente documento te  oriente sobre los pasos a seguir para alcanzar el objetivo planteado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Objetivos de la unidad}
+
+Al finalizar la unidad el estudiante estará en capacidad de IDENTIFICAR, CALCULAR, INTERPRETAR e INFERIR sobre un intervalo de confianza para estimadores de una y dos poblaciones,
+que le permita seleccionar la mejor alternativa para la estimación de un parámetro poblacional, orientados a la toma de decisiones  informadas.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section*{3. Duración}
+La presente  unidad será desarrollada desde el 30 de octubre hasta 4 de noviembre de 2020 . Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Viernes Lunes y  Miércoles) y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Blackboard hasta el  8 de noviembre de 2020 
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+% 	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Cronograma de trabajo}
+
+
+\begin{tabular}{p{4cm}p{10cm}}
+\hline	
+Fecha                   & Actividad	\\
+\hline 	
+{\bf Actividad 1}            & Construir un mapa mental sobre intervalos de confianza elaborado a mano, el cual deberá ser entregado en formato pdf \\
+Trabajo individual     & \ \\
+Fecha  : & 8 de noviembre de 2020\\
+Hora   : & 23:59 hora local \\
+\hline 
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tabular}{p{4cm}p{10cm}}
+	\hline	
+	Fecha                   & Actividad	\\
+	\hline
+{\bf Actividad 2}  & Resuelva las preguntas y problemas planteadas en  el  taller y entregue su solución  en formato  pdf en el enlace correspondiente de  Blackboard\\
+Trabajo individual &   \\
+Fecha  : & 8 de noviembre de 2020\\
+Hora   : & 23:59 hora local \\
+\hline 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hline 
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section*{5. Criterios de evaluación}
+%
+%\begin{itemize}
+%	\item 
+%	\item 
+%	\item 
+%\end{itemize}
+%
+%Los entregables completos y enviados dentro de los tiempos establecidos  otorgarán 10 puntos en cada caso, para un  total de 30 puntos. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section*{6. Entregables}
+\section*{5. Entregables}
+\begin{itemize}
+\item {\bf Entregable 1}: Mapa mental sobre intervalos de confianza .
+\item {\bf Entregable 2}: Solucionario de problemas sobre intervalos de confianza.  
+\end{itemize}
+\vspace{1cm}
+
+Domingo 8 de noviembre de 2020\\
+Hora límite : 23:59  hora  local
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

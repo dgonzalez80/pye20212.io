@@ -1,0 +1,333 @@
+\documentclass[base=hide,12pt]{elegantbook}
+
+\title{Unidad : Variable aleatoria conjuntas}
+\subtitle{Probabilidad y Estadística}
+
+\author{Daniel Enrique González Gómez}
+\institute{Pontificia Universidad Javeriana Cali}
+\date{Marzo, 2020}
+\version{1.00}
+\bioinfo{Area}{Estadística}
+
+% Frase....
+% \extrainfo{}
+
+%\logo{logo-blue.png}
+\cover{banner_o3.png}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{color}
+\usepackage{tcolorbox}
+%%\usepackage[margin=0.5in]{geometry}
+%\usepackage{amsthm,amssymb,amsfonts}
+%%\usepackage{tikz,lipsum,lmodern}
+%\usepackage[most]{tcolorbox}
+%\usepackage{xcolor}
+
+\definecolor{col1}{rgb}{0.42,0.35,0.80}% magenta 
+\definecolor{col2}{rgb}{0.0,0.65,0.31}%   verde
+\definecolor{col3}{rgb}{1.0,0.49,0.09}%   naranja
+\definecolor{col4}{rgb}{0.0,0.2,0.6}%  azul oscuro 
+\definecolor{col5}{rgb}{0.99,0.05,0.21}%  rojo
+
+%---------------------------------------------------------------------------------------------
+\newtcolorbox{Box1}[2][]{	   % caja  azul
+	colback=white!95!col1,
+	colframe=white!20!col1,	fonttitle=\bfseries,
+	colbacktitle=white!10!col1,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%------------------------------------------------------ --------------------------------------
+\newtcolorbox{Box2}[2][]{  % caja verde  ok
+	colback=white!95!col2,
+	colframe=white!20!col2,	fonttitle=\bfseries,
+	colbacktitle=white!10!col2,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%-------------------------------------------------------------------------------------------
+
+\newtcolorbox{Box3}[2][]{ % caja naranja
+	colback=white!95!col3,
+	colframe=white!20!col3,	fonttitle=\bfseries,
+	colbacktitle=white!10!col3,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+
+\newtcolorbox{Box4}[2][]{  % caja purpura  ok
+	colback=white!95!col4,
+	colframe=white!20!col4,	fonttitle=\bfseries,
+	colbacktitle=white!10!col4,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+\newtcolorbox{Box5}[2][]{    %
+	colback=white!95!col5,
+	colframe=white!20!col5,	fonttitle=\bfseries,
+	colbacktitle=white!10!col5,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{mybox}[2][]{boxsep=1em,left=-0em,
+	
+	colback=blue!5!white, 
+	colframe=blue!75!black, 
+	fonttitle=\bfseries\sffamily,
+	colbacktitle=blue!85!red!60,enhanced,
+	
+	attach boxed title to top left={yshift=-3mm,xshift=3mm},
+	title=#2,#1}
+
+
+\newtcolorbox{mybox2}[2][]{%
+	colback=bg,
+	colframe=blue!75!black,	fonttitle=\bfseries,
+	coltitle=blue!75!black,
+	colbacktitle=white!5!col5,enhanced,
+	attach boxed title to top left={yshift=-1.2mm, xshift=2mm},
+	title=#2,#1}
+%-----------------------------------------------------------------------------------------
+\font\domino=domino
+\def\die#1{{\domino#1}}
+
+
+
+\setlength{\parindent}{0cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textcolor{col4}{\LARGE \bf Modelos especiales de probabilidad}    \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textcolor{col4}{\LARGE  \bf Distribución Bernoulli}\\
+%\begin{Box2}{Propiedades}
+%Propiedades
+%\end{Box2}
+%\begin{Box4}{Titulo}
+%	Definiciones
+%\end{Box4}
+%%ejemplo 1 ===============================================================================
+%\textcolor{col3}{\bf Ejemplo 1.}  \\
+%%==============================================================================
+%\textcolor{col4}{\bf Solución: }\\
+%\textcolor{col1}{\bf Ejemplo 9:}\\
+%\textcolor{col5}{\bf Nota:}\\
+%\begin{lstlisting}
+%codigo R
+%\end{lstlisting}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\LARGE \bf Intervalos de confianza} \\
+\vspace{1cm} 
+\textcolor{col4}{\bf \large Estimación por intervalos de confianza}\\
+	\begin{center}
+		\includegraphics[scale=0.5]{gic.png}
+	\end{center}
+Un {\bf estimador por intervalo de confianza} (IC) es una regla que especifica como usar las mediciones obtenidas en una muestra para calcular dos números que forman los extremos del intervalo que confiamos contenga al parámetro de interés $\theta$. Dependiendo del parámetro se utiliza en la construcción del IC las distribuciones muestrales normal estándar ($Z$), t-student, $\chi^{2}$ o F-Fisher \\ \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\bf \large Intervalos de confianza para la media, con varianza conocida}\\
+
+Partimos de dos valores que contiene el parámetro $\theta$
+	$$L_{I} \leq \theta \leq L_{S} $$
+	bajo el supuesto de que
+	$$Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1)$$
+	podemos construir el siguiente intervalo
+	$$P(L_{IC} \leq Z \leq L_{SC})=1-\alpha $$
+	donde $(1-\alpha)$ conforma el concepto de confianza, el cual difiere del concepto de probabilidad, en cuanto la confianza representa la proporción de intervalos que contienen el parámetro. 
+%\begin{center}
+%\includegraphics[scale=0.5]{confianza.png}
+%\end{center}
+	De 100 intervalos construidos a partir muestras aleatorias, $(1-\alpha)\%$ o más contendrán el parámetro.1 \\
+	\begin{eqnarray*}
+		P(-z_{\alpha/2} \leq Z \leq z_{\alpha/2})&=&1-\alpha \\
+		P\Bigg(-z_{\alpha/2} \leq \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \leq z_{\alpha/2}\Bigg)&=&1-\alpha\\
+		P\Bigg(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\Bigg)&=&1-\alpha \\
+	\end{eqnarray*}
+	el intervalo de confianza para la media poblacional queda determinado por:\\
+
+			$$IC_{\mu}: \bar{x} \pm z_{\alpha/2} \hspace{.1cm}\dfrac{\sigma}{\sqrt{n}} $$
+			\\
+			Supuestos:\\
+			$X\sim N(\mu,\sigma^{2})$\\
+			varianza conocida\\
+			
+
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\bf \large Intervalo de confianza para la media, con varianza desconocida }\\
+	
+	$$T=\dfrac{\bar{X}-\mu}{s/ \sqrt{n}}$$
+	se distribuye t student con $n-1$ grados de libertad y el intervalo se construye \\
+	\begin{eqnarray*}
+		P\Big(-t_{\alpha/2} \leq T \leq t_{\alpha/2} \Big)&=&1-\alpha \\
+		P\Big(-t_{\alpha/2} \leq \frac{\bar{X}-\mu}{s/\sqrt{n}} \leq t_{\alpha/2} \Big)&=&1-\alpha \\
+		P\Bigg(\bar{X}-t_{\alpha/2} \dfrac{s}{\sqrt{n}} \leq \mu \leq \bar{X}+t_{\alpha/2}\dfrac{s}{\sqrt{n}}\Bigg)&=&1-\alpha \\
+	\end{eqnarray*}
+
+			$$IC_{\mu}: \bar{x} \pm t_{\alpha/2} \hspace{.1cm}\frac{s}{\sqrt{n}} $$
+			
+			\\
+			Supuestos:\\
+			$X\sim N(\mu,\sigma^{2})$\\
+			varianza desconocida\\
+
+	\\
+	
+
+	%\ejemplo \\
+	Cuando el tamaño de la muestra se considera grande (usualmente $n>30$) el estadístico T se aproxima a la distribución normal estandar, en este caso el intervalo de confiaza se puede construir a apartir de:\\
+	
+
+			$$IC_{\mu}: \bar{x} \pm z_{\alpha/2} \hspace{.1cm}\dfrac{s}{\sqrt{n}} $$
+			\\
+			Supuestos:\\
+			$X\sim N(\mu,\sigma^{2})$\\
+			varianza desconocida\\
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\textcolor{col1}{\bf Ejemplo}\\	
+ Se registró el tiempo transcurrido entre la facturación y la recepción del pago, para una muestra de 100 clientes en una empresa. La media y la desviación estándar son respectivamente: 39.1 días y 17.3 días. Con el fin de establecer una medición de la calidad en el servicio, se requiere determinar una estimación del 95\% para la media.
+
+Solución: La estimación del tiempo que demora el pago de una factura es un valor de importancia tanto para empresarios como para proveedores, pues esta información se utiliza para la programación de gastos e ingresos. El problema nos suministra la siguiente información:
+	\begin{itemize} 
+	\item $\bar{x}=39.1$ días
+	\item $s=17.3$ días, lo que significa que se desconoce la varianza
+	\item $n=100$ que se considera grande
+	\item se requiere construir un IC del 95\% para $\mu$, que implica un valor del percentil $z=\pm 1.96$
+	\end{itemize}
+	$$\bar{x} \pm z_{\alpha/2} \frac{s}{\sqrt{n}} $$
+	$$39.1 \pm 1.96 \frac{17.3}{\sqrt{100}} $$
+	$$\Bigg(39.1 -1.96 \frac{17.3}{\sqrt{100}};39.1 + 1.96 \frac{17.3}{\sqrt{100}}\Bigg)$$
+	$$(35.71; 42.49 )$$
+	El tiempo promedio transcurrido entre la facturación y el pago en la empresa está entre 35.7 dias y 42.5 dias con una confianza del 95\% \\ \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\bf \large Tamaño de la muestra para estimar una media}\\
+	Uno de los problemas más frecuentes a los que nos enfrentamos es la determinación del tamaño de la muestra para realizar una estimación de la media que garantice una confianza del $(1-\alpha)\%$
+	$$P\Bigg(-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \leq \bar{X}-\mu \leq z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\Bigg)=1-\alpha$$
+	Para construirlo partimos del supuesto que podemos tolerar un error de muestreo
+	$$e = \vert\bar{X}-\mu\vert \leq z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$$
+	y que deseamos una con fiabilidad del $(1-\alpha)\%$.
+	%Entonce podemos tener la confianza del $(1-\alpha)\%$ de que el error no exceda $z_{\alpha/2} \frac{\sigma}{\sqrt{n}}$
+	de la siguiente igualdad despejamos $n$\\
+	$$e= z_{\alpha/2} \frac{\sigma}{\sqrt{n}}$$
+	$$e^{2}= z_{\alpha/2}^{2} \frac{\sigma^{2}}{n}$$
+
+
+			$$n = \displaystyle\frac{z_{\alpha/2}^{2}\sigma^{2}}{e^{2}}$$
+			
+	%\ejemplo \\
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\bf \large Intervalos de confianza para la proporción}\\
+	La construcción del intervalo de confianza para una proporción es similar al proceso realizado en la construcción de la media, bajo el supuesto de $np>10$ que permite la aproximación a una distribución normal
+	$$\widehat{p} \sim N\Big(p, \frac{p(1-p)}{n}\Big) $$
+	por tanto
+	$$\Bigg[\widehat{p}-z_{\alpha/2}\sqrt{\frac{\widehat{p}\hspace{.1cm}(1-\widehat{p}}{n}} \hspace{.2cm};\hspace{.2cm} \widehat{p}+z_{\alpha/2}\sqrt{\frac{\widehat{p}\hspace{.1cm}(1-\widehat{p}}{n}} \Bigg] $$
+	
+
+			$$IC_{p}: \widehat{p} \pm z_{\alpha/2} \hspace{.1cm}\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}} $$
+			\\
+			Supuesto:\\
+			$np>5$ o $n(1-p)>5$\\
+			
+
+	%\ejemplo \\
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\bf \large Intervalos de confianza para la variaza}\\
+	En el caso del intervalo de confianza para la varianza se parte de la premisa de que la variable
+	$$\frac{(n-1)S^{2}}{\sigma^{2}} \sim \chi^{2}_{v=n-1}$$
+	a partir de ella se puede construir
+	$$P\Bigg(\chi^{2}_{1-\alpha/2} \leq \frac{(n-1)S^{2}}{\sigma^{2}} \leq \chi^{2}_{\alpha/2} \Bigg)=1-\alpha$$
+	al invertir esta ecuaciones tenemos
+	$$P\Bigg(\frac{1}{\chi^{2}_{1-\alpha/2}} \geq \frac{\sigma^{2}}{(n-1)S^{2}} \geq \frac{1}{\chi^{2}_{\alpha/2}} \Bigg)=1-\alpha$$
+	finalmente tenemos
+	$$P\Bigg( \frac{(n-1)S^{2}}{\chi^{2}_{\alpha/2}} \leq \sigma^{2} \leq \frac{(n-1)S^{2}}{\chi^{2}_{1-\alpha/2}} \Bigg)=1-\alpha$$
+	
+
+			$$IC_{\sigma^{2}}: \Bigg( \displaystyle\frac{(n-1)S^{2}}{\chi^{2}_{\alpha/2}} ;\displaystyle\frac{(n-1)S^{2}}{\chi^{2}_{1-\alpha/2}} \Bigg)$$
+			\\
+			Supuestos:\\
+			$X\sim N(\mu,\sigma^{2})$\\
+			
+\textcolor{col1}{\bf Ejemplo}\\	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\bf \large Estimación de intervalos de confianza para comparación de dos poblaciones}: \\
+	Cuando se compraran dos poblaciones se puede estar interesado en la diferencia de medias, diferencia de proporciones o la razón de varianzas. Es necesario distinguir cuando se trata de diferencia de medias pareadas o diferencia para poblaciones independientes.\\
+\textcolor{col4}{\bf \large Diferencia de medias - pareadas}\\
+	Se consideran muestras pareadas cuando existen una fuerte dependencia entre pares de observaciones de dos poblaciones. Es el caso de experimentos donde se observan individuos en dos momentos diferentes de tiempo, por ejemplo estudiantes a los que se les realiza un examen de entrada y un examen de salida. En este caso se compara la evolución de cada individuo consigo mismo conformando parejas de mediciones.
+	$$IC_{d=\bar{x}_{1}-\bar{x}_{2}}: \bar{d} \pm t_{\alpha/2} \frac{s_{d}}{\sqrt{n}}$$
+	donde $d_{i}=x_{1i}-x_{2i}$ y $s_{d}$ es la desviación estandar de las diferencias $d_{i}=x_{1i}-x_{2i}$ \\ \\
+	%\ejemplo \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\bf \large Diferencia de medias poblaciones independientes}\\
+
+			Caso1 :Supone varianzas iguales y desconocidas\\
+			$$(\bar{x}_{1}-\bar{x}_{2})\pm t_{\alpha/2} \hspace{.2cm}s_{p} \sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}} $$
+			donde $s_{p}^{2}$ es la varianza común
+			$$s_{p}^{2}=\frac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}$$
+			y $t_{\alpha/2}$ se distribuye t-student con $v=n_{1}+n_{2}-2$ grados de libertad\\
+			Supuestos: \\
+			$X_{1}$ y $X_{2}$ son variables aleatorias independientes con distribución normal
+			$X_{1}$ y $X_{2}$ tienen varianzas iguales pero desconocidas
+
+	%\ejemplo xxxxxx \\  
+	
+	
+
+			Caso2: Supone varianzas diferentes, pero desconocidas \\
+			%En el caso tenemos
+			$$(\bar{x}_{1}-\bar{x}_{2})\pm t_{\alpha/2} \sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}} $$
+			donde los grados de libertad de t se aproximan a
+			$$v=\frac{(s_{1}^{2}/n_{1}+s_{2}^{2}/n_{2})^{2}}{\Big[(s_{1}^{2}/n_{1})^{2}/(n_{1}-1)\Big]+\Big[(s_{2}^{2}/n_{2})^{2}/(n_{2}-1)\Big]}$$
+
+	
+\textcolor{col1}{\bf Ejemplo}\\	
+	
+	
+	En cualquiera de los casos los resultados pueden generar que intervalo sea de la forma:
+\begin{itemize}	
+	\item $(-,-)$, los dos limites que conforman el IC son negativos. De este resultado se puede concluir que $\mu_{1}<\mu_{2}$
+	\item $(-,+)$, el limite inferior es negativo y el superior es positivo. Este intervalo contiene la posibilidad de $\mu_{1}=\mu_{2}$
+	\item $(+,+)$, los dos limites son positivos, De este resultado podriamos concluir que $\mu_{1}>\mu_{2}$ \\ \\
+\end{itemize}	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\bf \large Diferencia de proporciones}\\
+	
+
+			$$(\widehat{p_{1}}-\widehat{p_{2}}) \pm z_{\alpha/2} \sqrt{\frac{\widehat{p_{1}}(1-\widehat{p_{1}})}{n_{1}}+\frac{\widehat{p_{2}}(1-\widehat{p_{2}})}{n_{2}}}$$
+
+	
+\textcolor{col1}{\bf Ejemplo}\\	
+ En una muestra de 200 clientes, el 20\% indica preferencia por tamaño especial de pizza. Con posterioridad a una campaña publicitaria realizada en radio y televisión promoviendo dicho producto, se selecciono una muestra de igual tamaño. En esta ultima muestra el 22\% de los clientes indico preferencia por el producto. De acuerdo con estos resultados calcule un intervalo de confianza del 95\% para la diferencia de proporciones. De acuerdo a los resultados obtenidos, podría afirmarse que la campaña publicitaria fue efectiva? \\
+	Solución: En este caso se trata de la comparación de dos proporciones (proporción de clientes que prefieren el tamaño especial dentro de los clientes de la pizzería - $p_{2}$ comparada con la proporción de los clientes de la misma pizzería pero después de realizada la campaña publicitaria - $p_{2}$)
+	Informacion suministrada:
+\begin{itemize} 	
+	\item $n_{1}=200$(numero de clientes encuestados sobre sus preferencias antes de realizar la campaña publicitaria
+	\item $\widehat{p}_{1}=0.20$ proporción muestral de clientes que prefieren el tamaño especial de pizza antes de la campaña publicitaria
+	\item $n_{2}=200$(numero de clientes encuestados sobre sus preferencias despues de realizada la campaña publicitaria
+	\item $\widehat{p}_{2}=0.22$ proporción muestral de clientes que prefieren el tamaño especial de pizza despues de realizadala campaña publicitaria
+	En ambos casos los tamaños de muestra se consideran grandes, permitiendo transformar la diferencia de proporciones en una variable z con distribución normal estándar
+	$$(0.20-0.22) \pm \sqrt{\frac{0.20*(1-0.20)}{200}+\frac{0.22*(1-0.22)}{200}}$$
+	$$(-0.0998 ; -0.0598) $$
+	El intervalo estimado se lee: La diferencia entre la proporción de clientes que prefieren el tamaño especial de pizza antes de la realizar la campaña publicitaria y la proporción de clientes que prefieren este mismo tamaño, después de realizada la campaña publicitaria esta entre -0.0998 y -0.059, con una confianza del 95\%. Estos resultados indican que $p_{1}-p_{2}<0$ o también que $p_{1}<p_{2}$, lo cual quiere decir que la proporción de clientes con esta preferencia aumento despues de haber realizado la campaña publicitaria.\\ \\
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{col4}{\bf \large Comparación de varianzas}\\
+	La comparación de varianzas se realiza con relación al valor que tome la razón de sus valores $\sigma^{2}_{1}/\sigma^{2}_{2}$. Observe que si esta relación es uno, indicaría que las varianzas son iguales. Por el contrario si esta razón es muy grande indicaría que $\sigma^{2}_{1}>\sigma^{2}_{2}$ y si su valor es muy cercano a cero indicaría lo contrario.
+	El uso de esta comparación esta relacionado con supuestos necesarios para la comparación de medias independientes, análisis de varianza y diseños experimentales.
+	En este caso se emplea en su construcción la distribución F de Fischer
+	
+
+			$$\Bigg(\frac{s_{1}^{2}}{s_{2}^{2}} F_{1-\alpha/2; v_{1},v_{2}} ; \frac{s_{1}^{2}}{s_{2}^{2}} F_{\alpha/2; v_{1},v_{2}} \Bigg) $$
+
+	
+\textcolor{col1}{\bf Ejemplo}\\	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{itemize}
+
+\end{document}

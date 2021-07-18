@@ -28,6 +28,6 @@ c5="#BC2B6A" # MORADO
 
 ### **Guía de aprendizaje 1.1**
 
-```{r,eval=FALSE, echo=FALSE, out.width="100%", fig.cap=""}
+```{r,eval=TRUE, echo=FALSE, out.width="100%", fig.cap=""}
 knitr::include_url("tex/modulo1/unidad11/Guia_de_aprendizaje_101.pdf", height="1000px")
 ```

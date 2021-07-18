@@ -1,0 +1,250 @@
+\documentclass[base=hide,11pt]{elegantbook}
+
+% Para Linux
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+\title{Unidad : Pruebas de Hipótesis}
+\subtitle{Probabilidad y Estadística}
+
+\author{Daniel Enrique González Gómez}
+\institute{Pontificia Universidad Javeriana Cali}
+\date{Noviembre, 2020}
+\version{1.00}
+\bioinfo{Area}{Estadística}
+
+% Frase....
+% \extrainfo{}
+
+%\logo{logo-blue.png}
+\cover{Modulo4.png}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{color}
+\usepackage{tcolorbox}
+%%\usepackage[margin=0.5in]{geometry}
+%\usepackage{amsthm,amssymb,amsfonts}
+%%\usepackage{tikz,lipsum,lmodern}
+%\usepackage[most]{tcolorbox}
+%\usepackage{xcolor}
+
+\definecolor{col1}{rgb}{0.42,0.35,0.80}% magenta 
+\definecolor{col2}{rgb}{0.0,0.65,0.31}%   verde
+\definecolor{col3}{rgb}{1.0,0.49,0.09}%   naranja
+\definecolor{col4}{rgb}{0.0,0.2,0.6}%  azul oscuro 
+\definecolor{col5}{rgb}{0.99,0.05,0.21}%  rojo
+
+%---------------------------------------------------------------------------------------------
+\newtcolorbox{Box1}[2][]{	   % caja  azul
+  	colback=white!95!col1,
+	colframe=white!20!col1,	fonttitle=\bfseries,
+	colbacktitle=white!10!col1,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%------------------------------------------------------ --------------------------------------
+\newtcolorbox{Box2}[2][]{  % caja verde  ok
+  	colback=white!95!col2,
+colframe=white!20!col2,	fonttitle=\bfseries,
+colbacktitle=white!10!col2,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+%-------------------------------------------------------------------------------------------
+
+\newtcolorbox{Box3}[2][]{ % caja naranja
+  	colback=white!95!col3,
+colframe=white!20!col3,	fonttitle=\bfseries,
+colbacktitle=white!10!col3,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+
+\newtcolorbox{Box4}[2][]{  % caja purpura  ok
+  	colback=white!95!col4,
+colframe=white!20!col4,	fonttitle=\bfseries,
+colbacktitle=white!10!col4,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+\newtcolorbox{Box5}[2][]{    %
+  	colback=white!95!col5,
+colframe=white!20!col5,	fonttitle=\bfseries,
+colbacktitle=white!10!col5,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{mybox}[2][]{boxsep=1em,left=-0em,
+	
+	colback=blue!5!white, 
+	colframe=blue!75!black, 
+	fonttitle=\bfseries\sffamily,
+	colbacktitle=blue!85!red!60,enhanced,
+	
+	attach boxed title to top left={yshift=-3mm,xshift=3mm},
+	title=#2,#1}
+
+
+\newtcolorbox{mybox2}[2][]{%
+	colback=bg,
+	colframe=blue!75!black,	fonttitle=\bfseries,
+	coltitle=blue!75!black,
+	colbacktitle=white!5!col5,enhanced,
+	attach boxed title to top left={yshift=-1.2mm, xshift=2mm},
+	title=#2,#1}
+%-----------------------------------------------------------------------------------------
+\font\domino=domino
+\def\die#1{{\domino#1}}
+
+\setlength{\parindent}{0cm} % no sangrado en los parrafos
+\usepackage{hyperref} % insertar links
+\usepackage{latexsym,epsfig,multicol, anysize} %%%%
+
+\usepackage{hyperref} % insertar links
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+\maketitle
+
+\frontmatter
+%\tableofcontents
+%
+\mainmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\begin{introduction}
+%	\item Introducción al tema 
+%	\item Objetivos de la unidad
+%	\item Fundamentos conceptuales
+%	\item Metodología
+%	\item Criterios de evaluación
+%	\item Fechas de entrega
+%\end{introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. Introducción}
+
+El origen de los estudios, relacionados con las pruebas de hipótesis estadísticas, se sitúa alrededor de 1738, cuando en un ensayo escrito por Daniel Bernoulli aparece el cálculo una estadística de prueba para ensayar su hipótesis en el campo de la astronomía. Entre 1915 y 1933 se desarrolla esta formulación gracias a los estudios realizados por tres grandes autores: Ronald Fisher, Jerzy Neyman y Egon Pearson. Hoy en día predomina la teoría de Neyman-Pearson (lema de Neyman-Pearson). \\
+
+Una hipótesis estadística es una afirmación o conjetura acerca de los parámetros de la distribución de probabilidades de una población. Si la hipótesis estadística especifica completamente la distribución, entonces ella se llama Hipótesis Simple, de otra manera se llama Hipótesis Compuesta.\\ 
+
+Las pruebas de hipótesis constituyen una de las principales herramientas que  proporciona la estadística a un profesional de cualquier disciplina para darle un carácter científico a sus afirmaciones y decisiones.\\
+
+En esta unidad se plantea el siguiente objetivo, el cual podrá lograrse con el desarrollo de los trabajos planteados y documentación proporcionada.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Objetivos de la unidad}
+Al finalizar la unidad el estudiante estará en capacidad de
+IDENTIFICAR, CALCULAR, CONTRASTAR y CONCLUIR sobre una hipótesis estadística que le permita la elección de la prueba más potente para la verificación de una prueba de hipótesis, permitiéndole tomar decisiones informadas.
+
+
+\section*{3. Duración}
+La presente  unidad será desarrollada durante la comprendida entre 9 y el 15 de noviembre.    
+Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Blackboard hasta el  15 de noviembre.
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+\newpage 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Recursos y cronograma de trabajo}
+{\bf Recursos}
+\begin{itemize}
+% \href{<url>}{<text to display>}.	
+\item \href{https://drive.google.com/open?id=17JkIdxED-k6f0V5RTFgba8KzEyIbcrs2}{Presentación Pruebas de hipótesis paramétricas}
+\end{itemize}
+
+Además de ellos  podrá complementar el tema con los capítulos 6 del libro de Navidi y del capitulo 10 del libro de Walpole  y videos relacionados con el tema :
+\begin{multicols}{2}
+\begin{itemize}
+	\item \href{https://drive.google.com/open?id=1IbIGZBDT1zx8ErJodoLiEcdS7IRsj3r9}{Capitulo 6 Navidi}
+	\item \href{https://drive.google.com/open?id=1QcYO59i9GpIV2Q4hlU02OCavdfKUYsNa}{Capitulo 10 Walpole}
+	\item \href{https://www.youtube.com/watch?v=XoXwb6qYl58}{Video Pruebas de hipótesis paramétricas}
+	\item \href{https://www.youtube.com/watch?v=m3YIdS2TVHk}{Video Pruebas de hipótesis no paramétricas}
+	\end{itemize}
+\end{multicols}
+
+\vspace{.5cm}
+\begin{tabular}{p{4cm}p{10cm}}
+	\hline	
+	Fecha                   & Actividad \\
+	\hline 	
+	{\bf Actividad-1}  \hspace{4cm} Trabajo  individual      & A partir del material suministrado, realice un resumen de los conceptos principales del tema a mano y con el construya un archivo pdf para entregarlo a través de  Blackboard\\
+	Fecha  : & 15 de noviembre de 2020\\
+Hora   : & 23:59 hora local \\
+\hline 
+{\bf Actividad 2} \hspace{4cm} Trabajo  individual   & Resuelva las preguntas y problemas planteadas en  el  taller y entregue su solución  en formato  pdf en el enlace correspondiente de  Blackboard\\
+
+&\\
+Fecha  : & 15 de noviembre de 2020\\
+Hora   : & 23:59 hora local \\
+\hline 
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Criterios de evaluación}
+
+\begin{itemize}
+	\item Reconoce los diferentes conceptos asociados con las pruebas de hipótesis 
+	\item Utiliza las herramientas estadística apropiadas en el calculo de las pruebas de hipotesis tanto paramétricas como no paramétricas en la solución de problemas en contexto
+	\item Utiliza herramientas computacionales que le permita  la solución de problemas en contexto a través de la simulación
+\end{itemize}
+
+Los entregables completos y enviados dentro de los tiempos establecidos  otorgarán 15 puntos en cada caso.
+
+
+
+
+
+%
+%\section*{4. Metodología}
+%El curso de Probabilidad y Estadística continuará bajo la modalidad virtual, para lo cual les recomiendo realizar los siguientes pasos en pro de cumplir con los objetivos planteados.
+%
+%\begin{itemize}
+%	\item Revisión de los documentos indicados en el punto anterior
+%	\item Construir un resumen de los conceptos principales del tema y realizar las preguntas sobre dudas en los encuentros sincrónicos con el profesor.
+%	\item En parejas y a partir de una base seleccionada, construir \href{https://es.wikipedia.org/wiki/Caso_de_estudio}{caso de estudio} y resolverlo. El caso deberá cumplir con los siguientes elementos:
+%	\begin{itemize}
+%		\item[*] El enunciado deberá ser por lo menos de media pagina
+%		\item[*] El objetivo general deberá estar encaminado a la toma de decisiones informadas
+%		\item[*] No deberá utilizar la palabra calcular en las preguntas formuladas
+%		\item[*] En todos los casos de realizar citaciones, deberán estar respectivamente documentadas
+%		\item[*] La solución deberá contemplar al menos 5 pruebas de hipótesis 
+%	\end{itemize}
+%\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section*{5. Criterios de evaluación}
+%
+%Para esta unidad deberá realizar las siguientes entregas y procesos:
+%
+%\begin{itemize}
+%\item Construir resumen del tema, puede ser mapa mental o tabla de la unidad
+%\item {\bf clase.300mae005@gmail.com}
+%\item Caso de estudio planteamiento y solución. 
+%\\
+%
+%\end{itemize}
+%
+%Los criterios de evaluación prioriza las siguientes habilidades:
+%
+%\begin{itemize}
+%%\item (33\%)  Habilidad para comunicarse efectivamente
+%\item (33\%)  Habilidad para resolver problemas en contexto 
+%\item (34\%)  Habilidad para el manejo de herramienta computacional
+%\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Entregables}
+
+\begin{itemize}
+	\item 	{\bf Entregable 1}. Resumen sobre pruebas de hipótesis (archivo pdf)
+	\item 	{\bf Entregable 2}. Taller sobre pruebas de hipótesis resuelto (archivo pdf)
+\end{itemize}
+\vspace{.5cm}
+Domingo 15 de noviembre de 2020\\
+Hora límite : 23:59 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

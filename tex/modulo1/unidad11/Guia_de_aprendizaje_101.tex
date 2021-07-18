@@ -1,0 +1,232 @@
+\documentclass[base=hide,11pt]{elegantbook}
+
+% Para Linux
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+\title{Guía de  aprendizaje No. 1\\
+	Unidad  1.1 Bases de datos}
+\subtitle{Probabilidad y Estadística}
+
+%\author{ Daniel Enrique González Gómez}
+\institute{Pontificia Universidad Javeriana Cali}
+\date{Febrero, 2021}
+\version{1.00}
+\bioinfo{Area}{Estadística}
+
+% Frase....
+% \extrainfo{}
+
+%\logo{logo-blue.png}
+\cover{Modulo1.png}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{color}
+\usepackage{tcolorbox}
+%%\usepackage[margin=0.5in]{geometry}
+%\usepackage{amsthm,amssymb,amsfonts}
+%%\usepackage{tikz,lipsum,lmodern}
+%\usepackage[most]{tcolorbox}
+%\usepackage{xcolor}
+
+\definecolor{col1}{rgb}{0.42,0.35,0.80}% magenta 
+\definecolor{col2}{rgb}{0.0,0.65,0.31}%   verde
+\definecolor{col3}{rgb}{1.0,0.49,0.09}%   naranja
+\definecolor{col4}{rgb}{0.0,0.2,0.6}%  azul oscuro 
+\definecolor{col5}{rgb}{0.99,0.05,0.21}%  rojo
+
+%---------------------------------------------------------------------------------------------
+\newtcolorbox{Box1}[2][]{	   % caja  azul
+  	colback=white!95!col1,
+	colframe=white!20!col1,	fonttitle=\bfseries,
+	colbacktitle=white!10!col1,enhanced,
+	attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+	title=#2,#1}
+%------------------------------------------------------ --------------------------------------
+\newtcolorbox{Box2}[2][]{  % caja verde  ok
+  	colback=white!95!col2,
+colframe=white!20!col2,	fonttitle=\bfseries,
+colbacktitle=white!10!col2,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+%-------------------------------------------------------------------------------------------
+
+\newtcolorbox{Box3}[2][]{ % caja naranja
+  	colback=white!95!col3,
+colframe=white!20!col3,	fonttitle=\bfseries,
+colbacktitle=white!10!col3,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+
+\newtcolorbox{Box4}[2][]{  % caja purpura  ok
+  	colback=white!95!col4,
+colframe=white!20!col4,	fonttitle=\bfseries,
+colbacktitle=white!10!col4,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+
+%----------------------------------------------------------------------------------------
+\newtcolorbox{Box5}[2][]{    %
+  	colback=white!95!col5,
+colframe=white!20!col5,	fonttitle=\bfseries,
+colbacktitle=white!10!col5,enhanced,
+attach boxed title to top left={xshift=1cm,	yshift=-2mm},
+title=#2,#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{mybox}[2][]{boxsep=1em,left=-0em,
+	
+	colback=blue!5!white, 
+	colframe=blue!75!black, 
+	fonttitle=\bfseries\sffamily,
+	colbacktitle=blue!85!red!60,enhanced,
+	
+	attach boxed title to top left={yshift=-3mm,xshift=3mm},
+	title=#2,#1}
+
+
+\newtcolorbox{mybox2}[2][]{%
+	colback=bg,
+	colframe=blue!75!black,	fonttitle=\bfseries,
+	coltitle=blue!75!black,
+	colbacktitle=white!5!col5,enhanced,
+	attach boxed title to top left={yshift=-1.2mm, xshift=2mm},
+	title=#2,#1}
+%-----------------------------------------------------------------------------------------
+\font\domino=domino
+\def\die#1{{\domino#1}}
+
+
+\setlength{\parindent}{0cm} % no sangrado en los parrafos
+\usepackage{hyperref} % insertar links
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+
+\maketitle
+
+\frontmatter
+%\tableofcontents
+%
+\mainmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{introduction}
+%	\item Introducción al tema 
+%	\item Objetivos de la unidad
+%	\item Fundamentos conceptuales
+%	\item Metodología
+%	\item Criterios de evaluación
+%	\item Fechas de entrega
+%\end{introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. Introducción}
+
+En esta unidad se  presenta  la \textbf{Metodología Estadística} como  estrategia que  permite  visualizar las diferentes etapas presentes en una investigación  o análisis de  datos :
+
+\begin{itemize}
+	\item Definición del problema
+	\item Definición de los objetivos
+	\item Definición de las variables de interés
+	\item Diseño del experimento
+	\item Recolección de la información
+	\item Procesamiento de información
+	\item Análisis descriptivo
+	\item Inferencia estadística
+	\item Recomendaciones y conclusiones
+\end{itemize}
+
+Haciendo especial referencia a la construcción, depuración  y documentación  de las bases de datos, acciones necesarias para un  buen  análisis de datos.\\
+
+Con este propósito se hará uso del portal \textbf{Bases de Datos Abiertos Colombia},  de la hoja electrónica \textbf{Excel} y del programa estadístico \textbf{R} y \textbf{RStudio}.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Objetivos de la unidad}
+
+Al finalizar la unidad los estudiantes estarán  en  capacidad de  RECONOCER los  pasos de la Metodología Estadística y podrán ESTRUCTURAR, LIMPIAR y DOCUMENTAR una  base de datos con  el fin de  garantizar los elementos  necesarios  para  realizar  un  procesamiento  de  datos. Para ello seleccionaran una base de datos  del  portal de  Datos Abiertos Colombia. Adicionalmente propondrán un problema que les permita el desarrollo de la metodológica estadística. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section*{3. Duración}
+La presente  unidad será desarrollada durante la  primera semana del semestre ( 26 de julio  al 01  de agosto de 2021). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad deberán ser entregados a través de la plataforma Brightspace hasta el  01 de agosto. 
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+% 	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Cronograma de trabajo}
+
+
+\begin{tabular}{p{4cm}p{10cm}}
+\hline	
+Fecha                   & Actividad	\\
+\hline 	
+{\bf Actividad 1}            &\\
+Trabajo individual     & \textcolor{col3}{\bf Metodología estadística:} Formular un  problema que le permita  desarrollar un  ejercicio académico durante  el  semestre a través de  la recolección  de información (primaria o secundaria), Ademas deberá establecer los  objetivos y las  variables de  interés , para las  cuales  deberá  identificar el tipo de  variable  y su  escala  de medición.  El resultado  de esta actividad deberá se entregado  en archivo pdf con  nombre: {\bf actividad1.pdf}  \\
+Recurso & Video: \href{URL}{Metodología Estadística}\\
+&\\
+Fecha  : & 01 de agosto 2021\\
+Hora   : & 23:59 hora local \\
+\hline 
+%\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{tabular}{p{4cm}p{10cm}}
+%	\hline	
+%	Fecha                   & Actividad	\\
+%	\hline
+{\bf Actividad 2}  & \\
+Trabajo individual &  \textcolor{col3}{\bf Base de datos:} Deberá  buscar una  base de  datos  de su interés  en el  portal  \href{https://www.datos.gov.co/}{Datos Abiertos Colombia},  depuarla  y  documentarla  si es  necesario. A partir de la información  recolectada deberá construir la ficha técnica de  la base. El resultado  de esta actividad deberá se entregado  en archivo pdf con  nombre: {\bf actividad2.pdf} \\
+Recurso & Video: \href{https://www.youtube.com/watch?v=lRftK2mL3Sw}{Como descargar datos abiertos}\\
+&Formato:  \href{https://drive.google.com/file/d/1O1eaS8y6olf5o_42ehgDgVZ4q1dganbd/view?usp=sharing}{Ficha técnica}\\
+& Excel \\
+& RStudio , paquete Rcmdr \\
+&\\
+Fecha  : & 07 de febrero  2021\\
+Hora   : & 23:59 hora local \\
+\hline 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Actividad 3}  &\\ 
+Trabajo individual & \textcolor{col3}{\bf Instalación de R y RStudio :} Para el  desarrollo  de las  actividades del curso deberá instalar las ultimas  versiones  de \href{https://www.r-project.org/}{R CRAN} y de \href{https://rstudio.com/products/rstudio/download/}{RStudio}. Para su correcta instalación  existen varios videos en  YouTube que le permitirán realizarlo de una manera correcta  \\ 
+Recursos : & \href{URL}{Guía instalación R y RStudio}\\
+           & \href{https://cran.r-project.org/}{R download}  \\
+           & \href{https://rstudio.com/products/rstudio/download/}{RStudio download}\\
+&\\
+Fecha  : & 01 de agosto 2021\\
+Hora   : & 23:59 hora local \\
+\hline 
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Criterios de evaluación}
+
+\begin{itemize}
+	\item Reconocer la relación existente ente la  definición del problema, el planteamiento de los objetivos y la  definición de las variables de interés dentro de la  Metodología Estadística.
+	\item Reconocer e identificar los diferentes tipos de variables  y sus respectivas escalas de medición.
+	\item Identificar la estructura de una base de datos
+\end{itemize}
+
+Los entregables completos y enviados dentro de los tiempos establecidos  otorgarán 10 puntos en cada caso, para un  total de 20 puntos. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Entregables}
+
+\begin{tabular}{lp{12cm}}
+{\bf Entregable } & {\bf Descripción} \\
+\hline 
+1& \textcolor{col3}{\bf actividad1.pdf} .\hspace{.5cm} Documento que contenga: Formulación de problema propuesto, definición  de los objetivos y definición de variables de interés. En este último caso detallar para cada variable su  tipo ( cualitativa o cuantitativa ) y su escala de medición ( nominal, ordinal, de intervalo o de razón).\\
+&\\
+\hline
+2&  \textcolor{col3}{\bf actividad2.pdf}.\hspace{.5cm}  Ficha técnica de  la base seleccionada .\\
+&\\
+\hline
+\end{tabular}
+\vspace{1cm}
+
+Domingo 01 de agosto de 2021\\
+Hora límite : 23:59  hora  local
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
