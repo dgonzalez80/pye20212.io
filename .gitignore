@@ -5,8 +5,9 @@
 data/
 img/
 pdf/
-tex/modulo1/unidad11/.aux
-tex/modulo1/unidad11/.log
-tex/modulo1/unidad11/.out
-tex/modulo1/unidad11/.tex
-tex/modulo1/unidad11/.gz
+tex/modulo1/unidad11/figure/
+.aux
+.log
+.out
+.tex
+.gz
