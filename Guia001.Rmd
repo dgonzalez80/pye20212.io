@@ -26,7 +26,7 @@ c5="#BC2B6A" # MORADO
 
 ```
 
-# <span style="color:#E77C00">**Sumatoria**</span>
+# <span style="color:#0DA5A6">**Sumatoria**</span>
 
 
 El **sumatorio** o **sumatoria** también conocida como operador de suma, notación sigma o símbolo de suma, es una notación matemática que permite representar una suma de varios sumandos, n o incluso infinitos sumandos son colocar puntos suspensivos. Se expresa mediante la letra sigma mayúscula.
@@ -151,7 +151,7 @@ f. $\displaystyle\sum_{i=1}^{15} \dfrac{(x_{i}-3.5)(y_{i}-4.0)}{(x_{i}-3.5)^{2}}
 
 <br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/> 
 
-# <span style="color:#E77C00">**Productoria**</span>
+# <span style="color:#0DA5A6">**Productoria**</span>
 
 El productorio o productoria, también conocido como multiplicatorio, multiplicatoria o simplemente producto es una notación matemática que representa una multiplicación de una cantidad arbitraria finita o infinita.
  
@@ -164,7 +164,7 @@ Este operador será utilizado para desarrollar el método de estimación de Máx
 
 ## **Definición**
 
-Sse define como:
+Se define como:
 
 $$\displaystyle\prod_{i=1}^n a_{i}   = a_1 \times a_2 \times a_3 \times  \cdots \times a_n$$
 El operador consiste en multiplicar un numero de veces establecido los términos $a_i$

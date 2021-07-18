@@ -26,12 +26,8 @@ c5="#BC2B6A" # MORADO
 
 ```
 
-# <span style="color:#E77C00">**En construcción**</span>
+# **Guía de aprendizaje 1.1**
 
-
-
-
-
-
-
-
+```{r, echo=FALSE, out.width="120%", fig.cap=""}
+knitr::include_url("tex/modulo1/unidad11/Guia_de_aprendizaje_101.pdf", height="1000px")
+```
