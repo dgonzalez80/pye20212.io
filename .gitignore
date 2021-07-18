@@ -5,9 +5,10 @@
 data/
 img/
 pdf/
-tex/modulo1/unidad11/figure/
 .aux
 .log
 .out
 .tex
 .gz
+.Rproj
+.css
