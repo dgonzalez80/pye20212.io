@@ -218,3 +218,6 @@ prod(1:10)
   
   c. $f(x_{i} = \dfrac{1}{\sqrt{2\pi}} \exp\{\frac{1}{2}x^{2}\}$
 
+
+
+
