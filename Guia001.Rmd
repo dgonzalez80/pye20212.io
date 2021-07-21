@@ -25,3 +25,13 @@ c4="#E09600" # AMARILLO
 c5="#BC2B6A" # MORADO  
 
 ```
+
+
+### **Guía de aprendizaje 1.1**
+
+```{r,eval=TRUE, echo=FALSE, out.width="100%", fig.cap=""}
+knitr::include_url("pdf/Guia_de_aprendizaje_101.pdf", height="1000px")
+```
+
+
+
